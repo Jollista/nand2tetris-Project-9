@@ -1,0 +1,37 @@
+class Main {
+	function void main() {
+		var int length;
+		var int i, newRow;
+		var int a, b, t; 
+
+		let length = Keyboard.readInt("How many fibonacci recursions beyond the first two? ");
+		
+		let i = 0;
+		let newRow = 2;
+		let a = 1;
+		let b = 1;
+
+		do Output.printInt(a);
+		do Output.printString(" ");
+		do Output.printInt(b);
+		do Output.printString(" ");
+
+		while (i < length) 
+		{
+			let t = a + b;
+			let a = b;
+			let b = t;
+			do Output.printInt(b);
+			do Output.printString(" ");
+
+			let i = i + 1;
+			let newRow = newRow + 1;
+			if (newRow = 10)
+			{
+				do Output.println();
+				let newRow = 0;
+			}
+		}
+		return;
+	}
+}
